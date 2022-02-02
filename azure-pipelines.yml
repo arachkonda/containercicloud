@@ -6,7 +6,7 @@ pool:
 variables:
 - group: Talend Configuration
 - name: project_name
-  value: 'AZUREPIPELINE'
+  value: 'CONTAINERCICLOUD'
 - name: job_name
   value: 'joindatadb'
 - name: job_version
@@ -25,10 +25,14 @@ steps:
         mavenPomFile: '$(project_name)/poms/pom.xml' 
         mavenOptions:
           -Dlicense.path=$(license.secureFilePath)
-          -Dupdatesite.path=$(UPDATESITE_PATH)
-          -Dservice.url=$(CLOUD_URL)
-          -Dcloud.token=$(CLOUD_TOKEN)
+          -Dtalend.studio.p2.base=$(p2_base)
+          -Dtalend.studio.p2.update=$(p2_update)
+          -Dservice.url=$(talend_cloud_url)
+          -Dcloud.token=$(talend_cloud_token)
           -Dcloud.publisher.screenshot=true
           -Xmx3096m -Xmx1024m
         options: '--settings $(settings_xml.secureFilePath) -Pcloud-publisher -pl jobs/process/$(job_name)_$(job_version) -am'
         goals: 'deploy'
+
+
+  
