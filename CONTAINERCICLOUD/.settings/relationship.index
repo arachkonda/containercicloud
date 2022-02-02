@@ -43,26 +43,4 @@
     "version" : "Latest",
     "type" : "property"
   } ]
-}, {
-  "baseItem" : {
-    "id" : "_FvuY0IOBEey0ZrexsKaWyw",
-    "version" : "0.1",
-    "type" : "test_case"
-  },
-  "relatedItems" : [ {
-    "id" : "_ZoIq0O3hEeawiph590D2RA",
-    "version" : "0.1",
-    "type" : "test_case"
-  } ]
-}, {
-  "baseItem" : {
-    "id" : "_Yv6UsIQPEey0ZrexsKaWyw",
-    "version" : "0.1",
-    "type" : "test_case"
-  },
-  "relatedItems" : [ {
-    "id" : "_ZoIq0O3hEeawiph590D2RA",
-    "version" : "0.1",
-    "type" : "test_case"
-  } ]
 } ]
