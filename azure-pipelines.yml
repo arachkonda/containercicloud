@@ -6,7 +6,7 @@ pool:
 variables:
 - group: Talend Configuration
 - name: project_name
-  value: 'CONTAINERCICLOUD'
+  value: 'containercicloud'
 - name: job_name
   value: 'joindatadb'
 - name: job_version
@@ -27,12 +27,10 @@ steps:
           -Dlicense.path=$(license.secureFilePath)
           -Dtalend.studio.p2.base=$(p2_base)
           -Dtalend.studio.p2.update=$(p2_update)
+          -Dpatch.path=$(patch.secureFilePath)
           -Dservice.url=$(talend_cloud_url)
           -Dcloud.token=$(talend_cloud_token)
           -Dcloud.publisher.screenshot=true
           -Xmx3096m -Xmx1024m
-        options: '--settings $(settings_xml.secureFilePath) -Pcloud-publisher -pl jobs/process/$(job_name)_$(job_version) -am'
+        options: '--settings $(settings_xml.secureFilePath) -Pcloud-publisher - -pl $(jobs_to_build) -am -fae'
         goals: 'deploy'
-
-
-  
