@@ -20,6 +20,7 @@ steps:
     name: license
     inputs:
       secureFile: license   
+      #this is comment
   - task: Maven@3
     inputs:
         mavenPomFile: '$(project_name)/poms/pom.xml' 
