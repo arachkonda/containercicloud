@@ -32,5 +32,6 @@ steps:
           -Dcloud.token=$(talend_cloud_token)
           -Dcloud.publisher.screenshot=true
           -Xmx3096m -Xmx1024m
+          -DaltDeploymentRepository=snapshots::default::http://localhost:8081/repository/snapshots/
         options: '--settings $(settings_xml.secureFilePath) -Pcloud-publisher - -pl $(jobs_to_build) -am -fae'
         goals: 'deploy'
