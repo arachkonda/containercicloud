@@ -6,7 +6,7 @@ pool:
  vmImage: 'AzurePipelineCI731'
 
 variables:
-- group: Talend Variables
+- group: Talend Configuration
 - name: project_name
   value: 'CONTAINERCICLOUD'
 - name: jobs_to_build
