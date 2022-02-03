@@ -30,7 +30,7 @@ steps:
           -Dtalend.studio.p2.base=$(p2_base)
           -Dtalend.studio.p2.update=$(p2_update)
           -Dpatch.path=$(patch.secureFilePath)
-          -DaltDeploymentRepository=releases::default::$(artifact_url)/repository/thirdparty/
+          -DaltDeploymentRepository=releases::default::$(NEXUS_URL)/repository/thirdparty/
           -Dcloud.publisher.screenshot=true
           -Xmx3096m -Xmx1024m
         options: '--settings $(settings_xml.secureFilePath) -Pcloud-publisher - -pl $(jobs_to_build) -am -fae'
