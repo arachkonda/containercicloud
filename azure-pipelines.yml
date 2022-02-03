@@ -2,15 +2,14 @@
 # Build Pipeline for building and publishing on Talend Cloud   
 trigger: none
 pool:
- vmImage: 'AzurePipelineCI731'   
-variables:
-- group: Talend Configuration
+ vmImage: 'AzurePipelineCI731'  
+ variables:
+- group: Talend Variables
 - name: project_name
-  value: 'containercicloud'
-- name: job_name
-  value: 'joindatadb'
-- name: job_version
-  value: '0.1'   
+  value: 'CONTAINERCICLOUD'
+- name: jobs_to_build
+  value: 'process/JoinDataDB_0.1' 
+   
 steps:
   - task: DownloadSecureFile@1
     name: settings_xml
