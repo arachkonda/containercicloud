@@ -30,7 +30,7 @@ steps:
   - task: DownloadSecureFile@1
     name: license
     inputs:
-      secureFile: Talend8license
+      secureFile: Licenses_df801
 
   - task: DownloadSecureFile@1
     name: pom_xml
