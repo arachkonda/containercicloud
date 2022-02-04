@@ -24,7 +24,7 @@ variables:
     -Dservice.url=$(CLOUD_URL)
     -Dcloud.token=$(CLOUD_TOKEN)
     -Dcloud.publisher.environment=default 
-    -Dcloud.publisher.workspace=default
+    -Dcloud.publisher.workspace=Personal
 
 steps:
   - task: DownloadSecureFile@1
