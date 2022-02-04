@@ -47,15 +47,6 @@ steps:
       destinationFolder: '/home/vsts/work/_temp/builder/'
       cleanDestinationFolder: true 
       overwriteExistingFiles: true
-  - task: PowerShell@2
-    displayName: 'Unzip and install builder maven plugin'
-    inputs:
-      targetType: 'inline'
-#        unzip $(cibuilder.secureFilePath)
-      script: |
-        ls /home/vsts/work/_temp/*
-        ls -R /home/vsts/work/_temp/builder/*
-      pwsh: true # For Linux
 
 #mvn install:install-file -Dfile=./8.0.1/builder-maven-plugin-8.0.1.jar -DpomFile=./8.0.1/builder-maven-plugin-8.0.1.pom
   - task: Maven@3
