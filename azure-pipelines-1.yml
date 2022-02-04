@@ -8,7 +8,7 @@ pool:
 variables:
 - group: Talend Variables
 - name: project_name
-  value: 'containercicloud'
+  value: 'CONTAINERCICLOUD'
 #Define it as a Variable in the GUI so it can be overriden at runtime
 #- name: jobs_to_build
 #  value: 'jobs/process/directory/job_directory_clean_1.0'
