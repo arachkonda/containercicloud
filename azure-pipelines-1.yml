@@ -12,8 +12,7 @@ variables:
 #Define it as a Variable in the GUI so it can be overriden at runtime
 #- name: jobs_to_build
 #  value: 'jobs/process/directory/job_directory_clean_1.0'
-- name: reference_project_name
-  value: 'joindatadb'
+
 - name: talend_ci_config
   value: >-
     -DforceUpdate=true
